@@ -5,12 +5,6 @@
  */
 const customTSWorkerFactory = (TypeScriptWorker) => {
     return class MyTypeScriptWorker extends TypeScriptWorker {
-
-        // Make the default method return nothing to avoid double completions
-        getCompletionsAtPosition() {
-            return undefined;
-        }
-
         /**
          * Add our own method to get completions
          * @type {import('./types').MyTypeScriptWorker['getMyCompletionsAtPosition']}
