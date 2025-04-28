@@ -124,9 +124,8 @@ monaco.languages.typescript.getTypeScriptWorker()
 								range: new monaco.Range(1, 1, 1, 1),
 								text: `import { ${completion.insertText ?? completion.name} } from '${completion.data?.moduleSpecifier}';\n`,
 							}];
+							acc.push(suggestion);
 						}
-		
-						acc.push(suggestion);
 		
 						return acc;
 					},
